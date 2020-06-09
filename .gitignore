@@ -10,3 +10,11 @@ Homestead.json
 Homestead.yaml
 npm-debug.log
 yarn-error.log
+
+phpunit.xml
+docker-compose.yml
+tests/coverage
+.php_cs.cache
+
+.idea
+.vscode

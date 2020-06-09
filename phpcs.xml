@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<ruleset name="Framgia Extended">
+    <description>Framgia Extended Coding Convention</description>
+    <arg name="tab-width" value="4"/>
+    <arg name="extensions" value="php"/>
+    <arg name="encoding" value="UTF-8"/>
+    <config name="ignore_warnings_on_exit" value="1"/>
+
+    <!-- Check both app/ and config/ and resources/lang -->
+    <file>./app</file>
+    <file>./config</file>
+    <file>./resources/lang</file>
+
+    <rule ref="Framgia"/>
+    <rule ref="Squiz.WhiteSpace.SuperfluousWhitespace">
+        <properties>
+            <!-- Force checking whitespace on blank lines -->
+            <property name="ignoreBlankLines" value="false" />
+        </properties>
+    </rule>
+    <!-- Check space between operator +-*/ -->
+    <rule ref="Squiz.WhiteSpace.OperatorSpacing">
+        <properties>
+            <property name="ignoreNewlines" value="true" />
+        </properties>
+    </rule>
+    <!-- Line between class method -->
+    <rule ref="Squiz.WhiteSpace.FunctionSpacing">
+        <properties>
+            <property name="spacing" value="1" />
+            <property name="spacingAfterLast" value="0" />
+            <property name="spacingBeforeFirst" value="0" />
+        </properties>
+    </rule>
+    <!-- Space after type cast, e.g. (string) $response -->
+    <rule ref="Generic.Formatting.SpaceAfterCast" />
+
+    <!-- Ignore method name convention in tests -->
+    <rule ref="PSR1.Methods.CamelCapsMethodName.NotCamelCaps">
+        <exclude-pattern>tests/**/*.php</exclude-pattern>
+    </rule>
+</ruleset>
