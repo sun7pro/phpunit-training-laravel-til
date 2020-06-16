@@ -18,3 +18,7 @@ tests/coverage
 
 .idea
 .vscode
+
+public/css/
+public/js/
+public/mix-manifest.json

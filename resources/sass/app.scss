@@ -1,1 +1,10 @@
-//
+:root {
+    --warning-color: #c29200;
+}
+
+@import '~terminal.css';
+
+.terminal-alert-warning {
+    color: var(--warning-color);
+    border-color: var(--warning-color);
+}
