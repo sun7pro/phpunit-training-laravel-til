@@ -12,7 +12,7 @@
     <div class="container">
         <div class="terminal-nav">
             <header class="terminal-logo">
-                <div class="logo terminal-prompt"><a href="https://terminalcss.xyz" class="no-style">{{ __('TIL') }}</a></div>
+                <div class="logo terminal-prompt"><a href="{{ url('/') }}" class="no-style">{{ __('TIL') }}</a></div>
             </header>
             <nav class="terminal-menu">
                 <ul vocab="https://schema.org/" typeof="BreadcrumbList">
@@ -21,7 +21,7 @@
                         <meta property="position">
                     </li>
                     <li>
-                        <a href="{{ url('/') }}" class="menu-item"><span>{{ __('Login') }}</span></a>
+                        <a href="{{ route('login') }}" class="menu-item"><span>{{ __('Login') }}</span></a>
                         <meta property="position">
                     </li>
                 </ul>

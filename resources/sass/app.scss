@@ -8,3 +8,9 @@
     color: var(--warning-color);
     border-color: var(--warning-color);
 }
+
+.form-input-invalid {
+    color: var(--error-color);
+    display: block;
+    margin-top: 5px;
+}

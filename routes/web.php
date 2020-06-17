@@ -11,6 +11,19 @@
 |
 */
 
+use Illuminate\Support\Facades\Response;
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('home');
 });
+
+// TODO: move to controller
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
+// TODO: move to controller
+Route::post('/login', function () {
+    return Response::make('Login');
+})->name('login');
